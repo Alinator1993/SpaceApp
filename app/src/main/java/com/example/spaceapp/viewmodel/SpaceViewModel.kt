@@ -7,7 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.spaceapp.repository.SpaceRepository
 import kotlinx.coroutines.launch
 
-class SpaceViewModel(private val spaceRepository: SpaceRepository = SpaceRepository()): ViewModel() {
+class SpaceViewModel(private val spaceRepository: SpaceRepository): ViewModel() {
 
     private val _spaceState = MutableLiveData<SpaceState>(SpaceState.Loading)
     val spaceState: LiveData<SpaceState> = _spaceState

@@ -8,7 +8,7 @@ import kotlinx.coroutines.withContext
 
 //TODO: HILT DI
 
-class SpaceRepository(private val api: SpaceApi = RetrofitClient.api) {
+class SpaceRepository(private val api: SpaceApi) {
 
     suspend fun getSpace():Result<List<SpaceResult>> = withContext(Dispatchers.IO){
         try {

@@ -30,7 +30,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
+//import androidx.lifecycle.viewmodel.compose.viewModel
+import org.koin.androidx.compose.koinViewModel
 import coil.compose.AsyncImage
 import com.example.spaceapp.model.SpaceResult
 import com.example.spaceapp.ui.theme.SpaceAppTheme
@@ -50,7 +51,7 @@ class MainActivity : ComponentActivity() {
             SpaceAppTheme {
                 // 1. Create the NavController here at the top level
                 val navController = rememberNavController()
-                val spaceViewModel: SpaceViewModel = viewModel()
+                val spaceViewModel: SpaceViewModel = koinViewModel()
 
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 
